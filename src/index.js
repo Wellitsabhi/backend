@@ -5,11 +5,10 @@ import  connectDB from "./db/db.js";
 //? Newer syntax
 dotenv.config({
     path: './env'
-
 })
 connectDB()
 .then(()=>{
-    app.on("error", (error)=>{
+    app.on("Server error", (error)=>{
         console.log("Error: ", error);
         throw Error
     })
